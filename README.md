@@ -1,16 +1,59 @@
 ## Hi there 👋
 
-<!--
-**Abhishek-Kumar-Rai5/Abhishek-Kumar-Rai5** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+# Hi, I'm Abhishek Kumar Rai
 
-Here are some ideas to get you started:
+Backend and Data Systems Developer focused on building reliable data pipelines, scalable APIs, and containerized deployment workflows.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+## Core Competence
+
+* Data ingestion and validation pipelines
+* Backend API development
+* Containerized deployment and infrastructure automation
+* CI/CD and system reliability
+
+---
+
+## Current Focus
+
+* Modernizing legacy data platforms
+* Improving deployment workflows
+* Designing reproducible data systems
+* Contributing to open-source infrastructure projects
+
+---
+
+## Tech Stack
+
+Languages:
+Python | SQL | JavaScript
+
+Backend:
+FastAPI | Flask
+
+Infrastructure:
+Docker | CI/CD | Linux
+
+Data:
+ETL | Data Pipelines
+
+---
+
+## Key Projects
+
+**ML Deployment Framework**
+Modular system integrating FastAPI backend with automated model serving.
+
+**Secured CI/CD Pipelines**
+Pipeline implementing automated testing, security scanning, and deployment workflows.
+
+**Email Classification Pipeline**
+Structured NLP pipeline with preprocessing, training, and evaluation workflows.
+
+---
+
+## Currently Working On
+
+Improving deployment and ingestion workflows in open-source systems.
+
