@@ -1,129 +1,71 @@
 # Hi, I'm Abhishek Kumar Rai
 
-I work on backend and data-oriented systems, mostly focused on building pipelines that take raw or unstructured inputs and turn them into usable, reliable outputs.
+I work on retrieval systems and approximate nearest-neighbour search — mostly the layer where query processing, index behaviour, and search efficiency meet. I'm interested in how retrieval infrastructure holds up under real conditions: changing data, predicate filters, and the demands of downstream LLM systems, rather than just how it performs on a fixed benchmark.
 
-Over time, I’ve worked on projects involving API-based systems, structured data processing, and deployment pipelines. A lot of my work involves designing how data flows through a system, making sure each stage is predictable, and debugging things when they inevitably break.
-
-More recently, I’ve been spending time improving how these systems handle semi-structured data, thinking more carefully about validation layers, and making deployments more consistent across environments.
-
-I’m particularly interested in how data processing systems, backend services, and machine learning components can be combined into workflows that are simple, maintainable, and production-ready.
+I'm currently a B.Tech student in Information Technology & Mathematical Innovation at the University of Delhi, working independently on a small portfolio of research projects in vector search and retrieval, alongside coursework in algorithms, ML, and systems.
 
 ---
 
-## Technical Stack
+## Research Projects
 
-### 🧠 Languages
-`Python` (backend systems, data pipelines, ML workflows) • `SQL` (querying, transformation, validation) • `JavaScript` (API interaction, tooling)
+### [Router Robustness Under Index Staleness](https://github.com/Abhishek-Kumar-Rai5/ann-router-staleness)
+*Ongoing*
+A C++ evaluation framework studying whether query-aware ANN search-effort routing, calibrated on a static HNSW index, remains reliable once the index evolves through insertions and deletions. Includes a fully audited negative result for a static-feature router, and an ongoing extension testing policy validity directly under controlled index evolution.
 
-### ⚙️ Backend & API Engineering
-`FastAPI` • `Flask`  
+### [Filter Selectivity and Per-Query Search Effort in ANN](https://github.com/Abhishek-Kumar-Rai5/filtered-ann-search-effort)
+*Ongoing*
+A C++ filtered-ANN benchmark (pre-filter, post-filter, ACORN) studying how predicate selectivity and local vector structure determine the search effort needed for target recall. Includes an independently found and audited cost-accounting issue in ACORN's native effort metric, and a structural decomposition of filtered-search recall into unreachable vs. under-searched targets.
 
-Designing **RESTful services** with clear request–response contracts • Input validation • Error handling  
-Middleware integration and **request lifecycle management**  
-Structuring backend services for **modularity and maintainability**  
-
-### 🗂️ Data Engineering & Processing
-Data ingestion pipelines for **structured and semi-structured inputs**  
-ETL workflows with transformation and validation stages • File processing (CSV, JSON, logs)  
-Schema handling and **structured data transformations**  
-Designing data flows with clear stage separation (ingestion → processing → output)  
-Logging and monitoring for **pipeline visibility and debugging**  
-
-### 🤖 Machine Learning Systems
-End-to-end workflows (**data → training → evaluation → inference**)  
-Designing **API-based inference pipelines**  
-Experiment structuring and reproducible training setups  
-Integration of ML components into backend systems  
-Handling model inputs/outputs with **consistent data interfaces**  
-
-### 🚀 Infrastructure & Deployment
-`Docker` • CI/CD Pipelines • Linux  
-
-Containerization for environment consistency  
-Automated testing, validation, and deployment workflows  
-Deployment strategies focused on **reproducibility and stability**  
-
-### 🧩 System Design & Reliability
-Separation of concerns across **data, processing, and serving layers**  
-Designing modular architectures for **scalability and maintainability**  
-Error handling, failure recovery, and debugging strategies  
-Observability through logging and traceability  
-Ensuring reproducibility across environments and deployments  
-
-### 🛠️ Workflow & Tooling
-`Git` • `GitHub Actions` • Command-line tooling  
-
-Version control and collaboration workflows  
-CI/CD automation and pipeline orchestration  
-System-level operations and debugging  
-Structured development workflows for consistent iteration and testing  ---
-
-## Key Projects
-
-### ML Deployment Framework — Containerized inference system
-
-- Designed a backend service for serving machine learning models via API  
-- Implemented reproducible deployment workflows using Docker  
-- Structured prediction pipelines for consistent and reliable inference  
-- Built with modular components to simplify integration and scaling  
+### [Per-Query Response Shapes Under Semantic Distraction](https://github.com/Abhishek-Kumar-Rai5/context-semantic-distraction)
+*Independent research project*
+A controlled long-context evaluation varying context size, evidence position, and semantic similarity of distractors, to characterize how individual queries — not just aggregate averages — respond as retrieved context grows.
 
 ---
 
-### Secured CI/CD Pipelines — Automated build and deployment workflow
+## Other Work
 
-- Developed CI/CD pipelines for automated testing, validation, and deployment  
-- Integrated security and validation checks into the deployment lifecycle  
-- Reduced manual intervention through consistent automation workflows  
-- Focused on reliability and repeatable system behavior  
+**GSoC 2026, PEcAn Organization** — contributing to an LLM-based extraction system that converts unstructured scientific text into structured, provenance-linked records with field-level confidence estimates. Ongoing, under review, not yet merged.
 
----
+A few earlier projects from before I moved toward retrieval/ANN research:
 
-### Email Classification Pipeline — Structured text processing system
-
-- Built a modular pipeline for data ingestion, preprocessing, and classification  
-- Designed workflows for consistent training and evaluation  
-- Ensured reproducibility across data processing stages  
-- Structured the system for easy extension and maintenance  
+- **[ML Deployment Framework](https://github.com/Abhishek-Kumar-Rai5/ML-deployment-framework)** — a small Dockerized API for serving ML models, built to get hands-on with reproducible deployment rather than just training models in a notebook.
+- **[Email Classification Pipeline](https://github.com/Abhishek-Kumar-Rai5/Email-classification-pipeline)** — a text-classification pipeline covering ingestion, preprocessing, and training/evaluation on a structured dataset.
 
 ---
 
-### MLOps Car Price Pipeline — End-to-end ML system with API serving
+## Stack
 
-- Developed an end-to-end pipeline from data processing to model serving  
-- Exposed real-time prediction functionality via API  
-- Integrated logging and monitoring for system visibility  
-- Designed for deployment-ready usage with modular workflow components  
+**Languages**
+- C++
+- Python
+- SQL
+- Java
 
----
+**Retrieval / ANN**
+- HNSW
+- FAISS
+- ACORN
+- hnswlib
+- BM25
+- Dense & hybrid retrieval
 
-## How I Approach Systems
+**ML & Evaluation**
+- scikit-learn
+- Statistical testing
+- Experimental design
+- Error analysis
 
-- Break problems into clear stages: ingestion → processing → serving  
-- Separate data transformation, validation, and delivery layers  
-- Design systems to fail gracefully and remain debuggable  
-- Prioritize clarity, modularity, and long-term maintainability  
-
----
-
-## Engineering Principles
-
-- Build systems that are maintainable and observable  
-- Prefer simple architectures that scale cleanly  
-- Keep components modular and testable  
-- Focus on reliability and reproducibility  
-
----
-
-## Currently Working On
-
-- Improving reliability of backend and data processing systems  
-- Building more robust data ingestion and validation workflows  
-- Refining deployment and automation practices  
+**Systems**
+- CMake
+- Linux
+- Git
+- Docker
+- CI/CD
 
 ---
 
 ## Connect
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=for-the-badge&logo=linkedin)](www.linkedin.com/in/abhik-rai)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/abhik-rai)
 [![GitHub](https://img.shields.io/badge/GitHub-Profile-black?style=for-the-badge&logo=github)](https://github.com/Abhishek-Kumar-Rai5)
 [![Email](https://img.shields.io/badge/Email-Contact-red?style=for-the-badge&logo=gmail)](mailto:rai.abhishek5140@gmail.com)
