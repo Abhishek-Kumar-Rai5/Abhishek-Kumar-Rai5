@@ -1,6 +1,6 @@
 # Hi, I'm Abhishek Kumar Rai
 
-I work on retrieval systems and approximate nearest-neighbour search — mostly the layer where query processing, index behaviour, and search efficiency meet. I'm interested in how retrieval infrastructure holds up under real conditions: changing data, predicate filters, and the demands of downstream LLM systems, rather than just how it performs on a fixed benchmark.
+I work on retrieval systems and vector databases, mostly the layer where query processing, index behaviour, and search efficiency meet. I'm interested in how retrieval infrastructure holds up under real conditions: changing data, predicate filters, and the demands of downstream LLM systems, rather than just how it performs on a fixed benchmark.
 
 I'm currently a B.Tech student in Information Technology & Mathematical Innovation at the University of Delhi, working independently on a small portfolio of research projects in vector search and retrieval, alongside coursework in algorithms, ML, and systems.
 
