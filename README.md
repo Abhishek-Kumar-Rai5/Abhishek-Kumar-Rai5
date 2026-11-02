@@ -1,71 +1,119 @@
 # Hi, I'm Abhishek Kumar Rai
 
-I work on retrieval systems and vector databases, mostly the layer where query processing, index behaviour, and search efficiency meet. I'm interested in how retrieval infrastructure holds up under real conditions: changing data, predicate filters, and the demands of downstream LLM systems, rather than just how it performs on a fixed benchmark.
+I am an undergraduate student pursuing a B.Tech in Information Technology & Mathematical Innovation at the Cluster Innovation Centre, University of Delhi.
 
-I'm currently a B.Tech student in Information Technology & Mathematical Innovation at the University of Delhi, working independently on a small portfolio of research projects in vector search and retrieval, alongside coursework in algorithms, ML, and systems.
+My interests lie in **systems engineering, AI infrastructure, and distributed data-intensive computing**. I am particularly interested in the engineering foundations behind modern computational workloads: how data is stored and retrieved, how systems process requests efficiently, how workloads are distributed, and how infrastructure maintains performance and reliability under changing conditions.
+
+I enjoy working at the intersection of algorithms and systems engineering, moving beyond theoretical approaches to investigate their actual behaviour through implementation, controlled experimentation, benchmarking, and performance analysis.
+
+My current research work has primarily involved approximate nearest-neighbour search, retrieval infrastructure, and machine learning evaluation. These projects have helped me investigate practical questions around index evolution, search-effort allocation, filtering, computational efficiency, and the reliability of evaluation pipelines.
+
+I am interested in extending this foundation towards **distributed systems, scalable AI infrastructure, high-performance computing, and the backend systems supporting large-scale AI workloads**.
+
+---
+
+## Research Interests
+
+- **AI Infrastructure and Systems:** Infrastructure for AI workloads, distributed inference, model serving, and efficient execution.
+- **Distributed Systems and Data Infrastructure:** Distributed computing, scalable data processing, storage systems, and fault-tolerant architectures.
+- **Performance Engineering:** Systems optimisation, profiling, computational efficiency, and latency-throughput trade-offs.
+- **Information Retrieval Infrastructure:** Approximate nearest-neighbour search, vector retrieval, index structures, and query processing.
+- **High-Performance Computing:** Parallel computing, efficient resource utilisation, and performance-oriented system design.
+- **Reliable Systems and Evaluation:** Experimental methodology, benchmarking, reproducibility, and the evaluation of computational systems.
 
 ---
 
 ## Research Projects
 
 ### [Router Robustness Under Index Staleness](https://github.com/Abhishek-Kumar-Rai5/ann-router-staleness)
-*Ongoing*
-A C++ evaluation framework studying whether query-aware ANN search-effort routing, calibrated on a static HNSW index, remains reliable once the index evolves through insertions and deletions. Includes a fully audited negative result for a static-feature router, and an ongoing extension testing policy validity directly under controlled index evolution.
+*Ongoing research*
+
+A C++ evaluation framework investigating whether query-aware ANN search-effort routing, calibrated on a static HNSW index, remains reliable as the index evolves through insertions and deletions.
+
+Includes an audited negative result for a static-feature router and an ongoing extension evaluating policy validity under controlled index evolution.
+
+**Focus:** Retrieval infrastructure, HNSW index evolution, adaptive query processing, and search-effort allocation.
 
 ### [Filter Selectivity and Per-Query Search Effort in ANN](https://github.com/Abhishek-Kumar-Rai5/filtered-ann-search-effort)
-*Ongoing*
-A C++ filtered-ANN benchmark (pre-filter, post-filter, ACORN) studying how predicate selectivity and local vector structure determine the search effort needed for target recall. Includes an independently found and audited cost-accounting issue in ACORN's native effort metric, and a structural decomposition of filtered-search recall into unreachable vs. under-searched targets.
+*Ongoing research*
 
-### [Per-Query Response Shapes Under Semantic Distraction](https://github.com/Abhishek-Kumar-Rai5/context-semantic-distraction)
-*Independent research project*
-A controlled long-context evaluation varying context size, evidence position, and semantic similarity of distractors, to characterize how individual queries — not just aggregate averages — respond as retrieved context grows.
+A C++ filtered-ANN benchmark studying how predicate selectivity and local vector structure determine the search effort required to achieve target recall.
+
+Evaluates pre-filtering, post-filtering, and ACORN, including an independently identified and audited issue in ACORN's native effort accounting. Also develops a structural decomposition of filtered-search recall loss into graph unreachability and navigational failure.
+
+**Focus:** Retrieval systems, graph-based search, query processing, and performance evaluation.
+
+### Sensitivity-Weighted Drift Prioritisation for Production ML
+*Research report finalised; paper in preparation*
+
+An empirical evaluation of sensitivity-weighted drift prioritisation against seven baselines across sixteen experiments and three model families.
+
+The proposed sensitivity weighting did not outperform drift-only prioritisation in the tested settings. During the investigation, I identified and corrected six evaluation defects, including a normalisation bug that inverted drift rankings. I also reduced PSI computation time by **364×** while preserving identical outputs, with the implementation validated through 486 passing tests.
+
+**Focus:** Production ML systems, distribution shift, evaluation reliability, and computational optimisation.
+
+### Search-Effort Policy Validity Under HNSW Index Evolution
+*Research project; paper in preparation*
+
+A pre-registered evaluation of fixed-effort and query-adaptive ANN search under controlled HNSW index updates, covering thirty index states and three seeds on SIFT1M.
+
+The study distinguishes computational-cost drift from recall-contract drift and evaluates whether adaptive policies maintain their predefined efficiency targets as the index changes.
+
+**Focus:** Retrieval infrastructure, systems behaviour under changing workloads, and experimental evaluation.
 
 ---
 
-## Other Work
+## Research Experience
 
-**GSoC 2026, PEcAn Organization** — contributing to an LLM-based extraction system that converts unstructured scientific text into structured, provenance-linked records with field-level confidence estimates. Ongoing, under review, not yet merged.
+### Google Summer of Code 2026 — PEcAn Organization
 
-A few earlier projects from before I moved toward retrieval/ANN research:
+Contributing to SAGE, an LLM-assisted scientific information extraction system for agronomic and ecological literature.
 
-- **[ML Deployment Framework](https://github.com/Abhishek-Kumar-Rai5/ML-deployment-framework)** — a small Dockerized API for serving ML models, built to get hands-on with reproducible deployment rather than just training models in a notebook.
-- **[Email Classification Pipeline](https://github.com/Abhishek-Kumar-Rai5/Email-classification-pipeline)** — a text-classification pipeline covering ingestion, preprocessing, and training/evaluation on a structured dataset.
+The workflow converts unstructured scientific documents into structured, provenance-linked experimental records, combining LLM-based extraction, automated validation, and human review.
+
+This work has given me practical experience with LLM-assisted data processing, document systems, evidence traceability, and the engineering challenges of building dependable AI-powered workflows.
+
+*Contribution ongoing; under review and not yet merged.*
 
 ---
 
-## Stack
+## Other Engineering Work
 
-**Languages**
-- C++
-- Python
-- SQL
-- Java
+- **[ML Deployment Framework](https://github.com/Abhishek-Kumar-Rai5/ML-deployment-framework)** — A Dockerised API for serving machine learning models, developed to explore reproducible deployment and backend integration.
+- **[Email Classification Pipeline](https://github.com/Abhishek-Kumar-Rai5/Email-classification-pipeline)** — A machine learning pipeline covering data ingestion, preprocessing, training, and evaluation.
 
-**Retrieval / ANN**
-- HNSW
-- FAISS
-- ACORN
-- hnswlib
-- BM25
-- Dense & hybrid retrieval
+---
 
-**ML & Evaluation**
-- scikit-learn
-- Statistical testing
-- Experimental design
-- Error analysis
+## Technical Stack
 
-**Systems**
-- CMake
-- Linux
-- Git
-- Docker
-- CI/CD
+**Programming:** C++, C, Python, Java, SQL
+
+**Systems & Infrastructure:** Linux, CMake, Docker, Git, FastAPI, REST APIs, CI/CD
+
+**Retrieval & Data Systems:** HNSW, FAISS, ACORN, hnswlib, BM25, dense and hybrid retrieval
+
+**Machine Learning & AI:** scikit-learn, LLM APIs, RAG, structured extraction, model evaluation
+
+**Research & Performance Evaluation:** Experimental design, statistical testing, benchmarking, profiling, error analysis
+
+---
+
+## Education & Achievements
+
+**B.Tech — Information Technology & Mathematical Innovation**  
+Cluster Innovation Centre, University of Delhi
+
+- CGPA: 8.77/10.0
+- Top 10% academic standing across the first two years
+- NITORI Scholarship for Academic Excellence, MEXT Japan, in collaboration with the University of Delhi
+- Google Summer of Code 2026 participant — PEcAn Organization
+- Twice selected for the University of Delhi VCIS Internship Scheme
+- 3rd Place — Hack-4-Viksit-Bharat Hackathon
 
 ---
 
 ## Connect
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/abhik-rai)
-[![GitHub](https://img.shields.io/badge/GitHub-Profile-black?style=for-the-badge&logo=github)](https://github.com/Abhishek-Kumar-Rai5)
-[![Email](https://img.shields.io/badge/Email-Contact-red?style=for-the-badge&logo=gmail)](mailto:rai.abhishek5140@gmail.com)
+- [LinkedIn](https://www.linkedin.com/in/abhik-rai)
+- [GitHub](https://github.com/Abhishek-Kumar-Rai5)
+- [Email](mailto:rai.abhishek5140@gmail.com)
