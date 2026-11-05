@@ -2,7 +2,7 @@
 
 I am an undergraduate student pursuing a B.Tech in Information Technology & Mathematical Innovation at the Cluster Innovation Centre, University of Delhi.
 
-My interests lie in **systems engineering, AI infrastructure, and distributed data-intensive computing**. I am particularly interested in the engineering foundations behind modern computational workloads: how data is stored and retrieved, how systems process requests efficiently, how workloads are distributed, and how infrastructure maintains performance and reliability under changing conditions.
+My interests lie in **systems engineering, data systems, AI infrastructure and distributed data-intensive computing**. I am particularly interested in the engineering foundations behind modern computational workloads: how data is stored and retrieved, how systems process requests efficiently, how workloads are distributed, and how infrastructure maintains performance and reliability under changing conditions.
 
 I enjoy working at the intersection of algorithms and systems engineering, moving beyond theoretical approaches to investigate their actual behaviour through implementation, controlled experimentation, benchmarking, and performance analysis.
 
